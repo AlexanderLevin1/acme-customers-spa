@@ -1,0 +1,22 @@
+{
+  "name": "acme-customers-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "PORT=3000 DATABASE_URL=postgres://localhost/acme_customers_spa_db nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "sequelize": "^4.34.0"
+  }
+}
