@@ -34,7 +34,6 @@ const createCustomer = (customer) => {
 
 // fetch and create the list of all customers
 fetch('/api/customers')
-    .then(response => errorCheck(response))
     .then(response => response.json())
     .then(data => data.forEach(customer => createCustomer(customer)))
     .catch(error => console.log('** error when fetching customer **', error))
@@ -50,7 +49,6 @@ createButton.addEventListener('click', () => {
         method: 'post',
         body: JSON.stringify({ email: emailInput.value })
     })
-        .then(response => errorCheck(response))
         .then(response => response.json())
         .then(customer => createCustomer(customer))
         .then(() => newMessage.innerText = '** You added a customer! **')
